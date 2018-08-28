@@ -1,0 +1,18 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<!-- 模态框（Modal） -->
+	
+<head th:fragment="autosizetextareahead" th:remove="tag">
+	<script th:src="@{/autosize/js/autosize.min.js}"></script>
+	<script th:src="@{/autosize/js/autosizeutil.js}"></script>
+</head>
+	
+	<div th:fragment="maxheighttextarea(textareaID,maxheight)">	
+		<textarea th:id="${textareaID}" th:style="'max-height:'+${maxheight}+';width: 100%;resize: none;'"></textarea>
+	</div>
+	
+	<div th:fragment="minMaxheighttextarea(textareaID,minheight,maxheight)">	
+		<textarea th:id="${textareaID}" th:style="'max-height:'+${maxheight}+';min-height:'+${minheight}+';width: 100%;resize: none;'"></textarea>
+	</div>
+	
+</html>

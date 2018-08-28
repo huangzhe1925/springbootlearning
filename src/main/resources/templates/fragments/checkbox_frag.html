@@ -1,0 +1,17 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="checkboxhead" th:remove="tag">
+	<script th:src="@{/checkbox/js/checkboxutil.js}"></script>
+</head>
+
+<div th:fragment="checkbox(ckId,label)">
+	<div th:id=${ckId} class="checkbox">
+		<label>
+			<div th:text="${label}"></div> <input type="checkbox" value="" />
+		</label>
+	</div>
+</div>
+
+</html>

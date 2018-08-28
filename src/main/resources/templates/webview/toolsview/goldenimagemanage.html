@@ -1,0 +1,63 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<th:block th:insert="~{fragments/common/common_frag :: commonhead}" />
+<th:block th:insert="~{fragments/selectpicker_frag :: selectpickerhead}" />
+<th:block th:insert="~{fragments/buttons_frag :: buttonshead}" />
+<th:block th:insert="~{fragments/autosizetextarea_frag :: autosizetextareahead}" />
+
+<!-- cmsconsole js-->
+<script th:src="@{/views/nodepowertool/js/goldenimagemanage.js}"></script>
+</head>
+
+<title>Golden Image Management</title>
+</head>
+<body>
+	<table class="table">
+		<caption>Golden Image Management</caption>
+		<tbody>
+			<tr>
+				<td>Golden Image Version:</td>
+				<td>
+					<div th:insert="~{fragments/selectpicker_frag :: selectpicker(gimgivsp)}"></div>
+				</td>
+				<td>
+					<div th:insert="~{fragments/selectpicker_frag :: selectpicker(gimgitypesp)}"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Build Server Version:</td>
+				<td>
+					<div th:insert="~{fragments/selectpicker_frag :: selectpicker(gimbsvsp)}"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Build Server:</td>
+				<td>
+					<div th:insert="~{fragments/selectpicker_frag :: selectpicker(gimBSsp)}"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table class="table">
+		<tbody>
+			<tr>
+				<td>
+					<div th:insert="~{fragments/buttons_frag :: buttons(GIMBtnGrp)}"></div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div th:insert="~{fragments/autosizetextarea_frag :: minMaxheighttextarea(gilogta,600px,800px)}"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

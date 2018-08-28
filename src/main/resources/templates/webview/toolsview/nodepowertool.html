@@ -1,0 +1,64 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<th:block th:insert="~{fragments/common/common_frag :: commonhead}" />
+<th:block th:insert="~{fragments/selectpicker_frag :: selectpickerhead}" />
+<th:block th:insert="~{fragments/checkbox_frag :: checkboxhead}" />
+<th:block th:insert="~{fragments/buttons_frag :: buttonshead}" />
+<th:block th:insert="~{fragments/autosizetextarea_frag :: autosizetextareahead}" />
+
+<!-- cmsconsole js-->
+<script th:src="@{/views/nodepowertool/js/nodepowertool.js}"></script>
+</head>
+
+<title>Node Power Management</title>
+</head>
+<body>
+	<table class="table">
+		<caption>Node Power Management</caption>
+		<tbody>
+			<tr>
+				<td>BuildServer:</td>
+				<td><div
+						th:insert="~{fragments/selectpicker_frag :: selectpicker(BSsp)}"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Slot:</td>
+				<td><div
+						th:insert="~{fragments/selectpicker_frag :: selectpicker(slotsp)}"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Node:</td>
+				<td><div
+						th:insert="~{fragments/selectpicker_frag :: multipleselectpicker(nodesp)}"></div></td>
+				<td>
+					<div th:insert="~{fragments/checkbox_frag :: checkbox(nodeck,'')}"></div>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	
+	<table class="table">
+		<tbody>
+			<tr>
+				<td>
+					<div th:insert="~{fragments/buttons_frag :: buttons(NPSBtnGrp)}"></div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<div th:insert="~{fragments/autosizetextarea_frag :: minMaxheighttextarea(logta,600px,800px)}"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head >
+	<th:block th:insert="~{fragments/common/common_frag :: commonhead}" />
+	<th:block th:insert="~{fragments/tableview_frag :: tableviewhead}" />
+	<th:block th:insert="~{fragments/fileuploader_frag :: fileuploaderhead}" />
+	<th:block th:insert="~{fragments/modal_frag :: modalviewhead}" />
+	<th:block th:insert="~{fragments/inputgroups_frag :: inputgroupshead}" />
+	<th:block th:insert="~{fragments/appendtabs_frag :: appendtabshead}" />
+	<th:block th:insert="~{fragments/autosizetextarea_frag :: autosizetextareahead}" />
+	
+	
+	<!-- cmsconsole js-->
+	<script th:src="@{/views/console/js/console.js}"></script>
+</head>
+
+<title>VxrailTools Console</title>
+</head>
+<body>
+<!-- 
+	<div th:include="fragments/modal_frag::submitModal('addNodeModal','Add Node','webview/fragments/console_frag','addNodeModalBody')"></div>
+	<div th:include="fragments/modal_frag::simpleContinueModal('continueModal','Confirm to Continue')"></div>
+	<div th:include="fragments/modal_frag::simpleConfirmModal('confirmModal','Confirm')"></div>
+ -->
+	<div class="left_part">
+			<div class="left_btn_pan">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="btn-group">
+						<button id="nodePowerManageBtn" type="button" class="btn btn-default">Node Power Management</button>
+						<button id="goldenImageManageBtn" type="button" class="btn btn-default">Golden Image Management</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="left_scroll">
+			Description
+		</div>
+	</div>
+	
+	<div class="right_part">
+		<div class="">
+		<!-- <div class="right_top"> -->
+			<div th:insert="~{fragments/appendtabs_frag :: appendTabs(editorTabs)}"></div>
+		</div>
+	</div>
+
+</body>
+</html>

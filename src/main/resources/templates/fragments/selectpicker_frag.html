@@ -1,0 +1,25 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<!-- 模态框（Modal） -->
+
+<head th:fragment="selectpickerhead" th:remove="tag">
+<script th:src="@{/bootstrap-select/js/bootstrap-select.min.js}"></script>
+<link rel="stylesheet" th:href="@{/bootstrap-select/css/bootstrap-select.min.css}" />
+<script th:src="@{/bootstrap-select/js/selectpickerutil.js}"></script>
+
+</head>
+
+<div th:fragment="selectpicker(selPickId)">
+	<select th:id="${selPickId}" class="selectpicker show-tick" data-live-search="true" data-width="auto">
+	</select>
+</div>
+
+<div th:fragment="multipleselectpicker(selPickId)">
+	<select th:id="${selPickId}" class="selectpicker show-tick "  multiple data-live-search="true" data-width="auto">
+	</select>
+</div>
+
+
+
+</html>

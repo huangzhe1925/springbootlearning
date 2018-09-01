@@ -1,4 +1,4 @@
-package com.hz.springbootlearning.chapter1;
+package com.hz.springbootlearning.chapter1.annotationconfigapplicationcontext;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
